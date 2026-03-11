@@ -102,10 +102,22 @@ padding:40px;
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:20px;
+}
 margin:40px auto;
 max-width:1100px;
+}
+@media (max-width:900px){
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+.cards{
+grid-template-columns:1fr;
+}
 }
 
 .card{
@@ -271,4 +283,41 @@ transition:width 0.3s ease;
 
 nav a:hover::after{
 width:100%;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+@media (max-width:600px){
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 10px;
+}
+
+}
+.hero h1{
+font-size:48px;
+}
+@media (max-width:600px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero{
+padding:40px 20px;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
 }
